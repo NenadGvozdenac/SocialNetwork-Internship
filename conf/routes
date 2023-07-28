@@ -1,0 +1,46 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+GET     /                                               controllers.PostController.readAllPostsFromFriends()
+
+POST    /api/login                                      controllers.LoginController.loginUser()
+
+POST    /api/register                                   controllers.RegisterController.registerUser()
+
+POST    /api/post/make                                  controllers.PostController.createPost()
+
+POST    /api/post/:id/delete                            controllers.PostController.deletePost(id: Int)
+
+GET     /api/users/all/read                             controllers.RegisterController.readAllPeopleFromDatabase()
+
+GET     /api/posts/all/read                             controllers.PostController.readAllPosts()
+
+GET     /api/posts/:username/read                       controllers.PostController.readPostsByUsername(username: String)
+
+GET     /api/post/:id/read                              controllers.PostController.readPostById(id: Int)
+
+POST    /api/post/:id/like                              controllers.LikeController.likePost(id: Int)
+
+POST    /api/post/:id/dislike                           controllers.LikeController.dislikePost(id: Int)
+
+GET     /api/user/friends                               controllers.FriendRequestController.listFriends()
+
+POST    /api/friendrequest/send                         controllers.FriendRequestController.sendFriendRequest()
+
+POST    /api/friendrequest/delete                       controllers.FriendRequestController.deleteSentFriendRequest()
+
+GET     /api/friendrequest/list/all                     controllers.FriendRequestController.listAllFriendRequests()
+
+GET     /api/friendrequest/list/all/friends             controllers.FriendRequestController.listAllFriends()
+
+POST    /api/friendrequest/accept                       controllers.FriendRequestController.acceptFriendRequest()
+
+POST    /api/friendrequest/decline                      controllers.FriendRequestController.declineFriendRequest()
+
+POST    /api/post/comment                               controllers.CommentController.addCommentToPost()
+
+POST    /api/post/:postid/comment/all/remove            controllers.CommentController.removeAllCommentsOnPost(postid: Int)
+
+POST    /api/post/:postid/comment/:commentid/remove     controllers.CommentController.removeCommentOnPost(postid: Int, commentid: Int)

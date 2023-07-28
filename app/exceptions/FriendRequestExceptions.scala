@@ -1,0 +1,9 @@
+package exceptions
+
+class OppositeFriendRequestExistsAlreadyException extends Exception
+
+class SameFriendRequestExistsException extends Exception
+
+class UsersAlreadyFriendsException extends Exception
+
+class UsersNotFriendsException extends Exception

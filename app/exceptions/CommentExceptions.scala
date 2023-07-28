@@ -1,0 +1,7 @@
+package exceptions
+
+class CommentBadlyFormedException extends Exception
+
+class CommentNotFoundException extends Exception
+
+class NotOwnCommentException extends Exception

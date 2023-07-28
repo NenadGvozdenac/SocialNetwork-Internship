@@ -1,0 +1,28 @@
+@(username: String)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome, @username!</title>
+@*        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/logo.png")">*@
+    </head>
+    <body>
+        <form enctype="application/x-www-form-urlencoded" method="post">
+            <h3>Create a post here!</h3>
+
+            <label for="title">Title</label>
+            <br>
+            <input type="text" placeholder="Post title here..." id="title" name="title">
+
+            <br><br>
+
+            <label for="caption">Caption</label>
+            <br>
+            <input type="text" placeholder="Caption here..." id="caption" name="caption">
+
+            <br><br>
+
+            <button type="submit">Create post!</button>
+        </form>
+    </body>
+</html>

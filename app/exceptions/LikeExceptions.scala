@@ -1,0 +1,6 @@
+package exceptions
+
+class LikesCouldNotBeRemovedException extends Exception
+
+class UserAlreadyLikedPostException extends Exception
+

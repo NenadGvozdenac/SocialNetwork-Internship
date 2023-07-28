@@ -1,0 +1,33 @@
+@()
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome! Please register.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+@*    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/registerForm.css")">*@
+@*    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/logo.png")">*@
+@*    <script src="@routes.Assets.versioned("javascripts/registerForm.js")"></script>*@
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form enctype="application/x-www-form-urlencoded" method="post" action="#">
+      <h3>Register now!</h3>
+
+      <label for="username">Username</label>
+      <input type="text" placeholder="Email or Phone" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" onChange="check();" name="password" required>
+
+      <label for="password">Confirm Password</label>
+      <input type="password" placeholder="Password" id="confirm-password" onChange="check();"required>
+      <p id="message" style="font-size: 12px;"></p>
+
+      <button type="submit" id="register-button" disabled>Register</button>
+    </form>
+  </body>
+</html>

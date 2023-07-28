@@ -100,7 +100,7 @@ The user needs to be either the owner of the post or friends with the owner of t
 It requires a JSON in the form of:
 ```json
 {
-  "idOfPost": number,
+  "idOfPost": 1,
   "commentText": "content of the comment"
 }
 ```
